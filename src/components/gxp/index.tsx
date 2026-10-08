@@ -1,7 +1,7 @@
 import React from "react";
-import { Badge } from "./badge";
-import { Alert, AlertTitle, AlertDescription } from "./alert";
-import { Skeleton } from "./skeleton";
+import { Badge } from "../ui/badge";
+import { Alert, AlertTitle, AlertDescription } from "../ui/alert";
+import { Skeleton } from "../ui/skeleton";
 
 export function StatusBadge({ type, label, icon: Icon }: { type: "aprobado" | "cuarentena" | "rechazado" | "borrador" | "tramite" | "desviacion_menor" | "desviacion_mayor" | "desviacion_critica", label: string, icon?: React.ElementType }) {
   const getStyle = () => {
@@ -84,3 +84,9 @@ export function DocHeader({ code, version, status }: { code: string, version: st
     </div>
   );
 }
+
+export * from "./SignatureModal";
+export * from "./AuditTrailPanel";
+export * from "./CorrectionDialog";
+export * from "./LockedBanner";
+

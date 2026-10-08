@@ -1,4 +1,4 @@
-import { EmptyState } from "@/components/ui/design-system";
+import { EmptyState } from "@/components/gxp";
 
 export default function NotFound() {
   return (

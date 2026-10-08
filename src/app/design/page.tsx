@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBadge, PageHeader, EmptyState, ErrorState, LoadingSkeleton, SodNotice, DocHeader } from "@/components/ui/design-system";
+import { StatusBadge, PageHeader, EmptyState, ErrorState, LoadingSkeleton, SodNotice, DocHeader } from "@/components/gxp";
 import { CheckCircle, AlertTriangle, XCircle, Clock, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

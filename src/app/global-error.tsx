@@ -1,8 +1,8 @@
 "use client";
 
-import { ErrorState } from "@/components/ui/design-system";
+import { ErrorState } from "@/components/gxp";
 
-export default function GlobalError({ error, reset }: { error: Error & { digest?: string }, reset: () => void }) {
+export default function GlobalError({ error: _error, reset: _reset }: { error: Error & { digest?: string }, reset: () => void }) {
   return (
     <html>
       <body>

@@ -3,7 +3,7 @@ import { formatCop, formatDateEs, formatDateTimeEs } from "./format";
 
 describe("Formatting Utils", () => {
   it("formats COP correctly", () => {
-    // eslint-disable-next-line no-irregular-whitespace
+     
     expect(formatCop(1500000)).toMatch(/\$\s?1\.500\.000/);
   });
 
