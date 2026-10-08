@@ -3,7 +3,7 @@ import { PageHeader, EmptyState } from "@/components/gxp";
 
 export default function InicioPage() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <PageHeader 
         title="Dashboard Principal" 
         subtitle="Bienvenido a la plataforma GRUFARCOL eBR" 
