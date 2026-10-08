@@ -4,7 +4,7 @@ La plataforma cuenta con 3 entornos:
 
 ## 1. Local (Desarrollo)
 - **Base de Datos**: Supabase CLI (local con Docker) o Supabase Cloud (Proyecto Dev).
-- **Hosting**: `http://localhost:3000`
+- **Hosting**: `http://localhost:3015`
 - **Variables requeridas** (`.env.local`):
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
