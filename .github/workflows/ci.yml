@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "staging", "etapa/*"]
+  pull_request:
+    branches: ["main", "staging"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Test (Vitest)
+        run: npx vitest run
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start local Supabase
+        run: npx supabase start
+
+      - name: Run pgTAP tests
+        run: npm run db:test
+
+      - name: Build Next.js
+        run: npm run build
